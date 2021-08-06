@@ -31,7 +31,5 @@ public class MainActivity extends AppCompatActivity {
         procurationList.setAdapter(procurationAdapter);
 
 
-        startActivity(new Intent(this, SearchActivity.class));
-
     }
 }
