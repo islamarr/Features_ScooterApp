@@ -1,0 +1,76 @@
+{
+  "data":[
+    {
+      "id":"1",
+      "city_name": "البساتين",
+      "procuration_id": "1",
+      "latLong": "31.2000,29.9167",
+      "fbLink": "https://translate.google.com.eg/",
+      "imgRes": "a.png",
+      "phone": "0111111111"
+    },
+    {
+      "id":"2",
+      "city_name": "البساتين",
+      "procuration_id": "2",
+      "latLong": "30.9667,31.1667",
+      "fbLink": "https://translate.google.com.eg/",
+      "imgRes": "b.png",
+      "phone": "011273737"
+    },
+    {
+      "id":"3",
+      "city_name": "البساتين",
+      "procuration_id": "1",
+      "latLong": "28.0833,30.7500",
+      "fbLink": "https://translate.google.com.eg/",
+      "imgRes": "c.jpg",
+      "phone": "0117766644"
+    },
+    {
+      "id":"4",
+      "city_name": "المهندسين",
+      "procuration_id": "2",
+      "latLong": "30.9667,31.1667",
+      "fbLink": "https://translate.google.com.eg/",
+      "imgRes": "d.png",
+      "phone": "0111555655"
+    },
+    {
+      "id":"4",
+      "city_name": "السلام",
+      "procuration_id": "1",
+      "latLong": "30.0561,31.2394",
+      "fbLink": "https://translate.google.com.eg/",
+      "imgRes": "a.png",
+      "phone": "011188766"
+    },
+    {
+      "id":"5",
+      "city_name": "عابدين",
+      "procuration_id": "2",
+      "latLong": "30.0131,31.2089",
+      "fbLink": "https://translate.google.com.eg/",
+      "imgRes": "d.png",
+      "phone": "0111004994"
+    },
+    {
+      "id":"6",
+      "city_name": "شبرا",
+      "procuration_id": "3",
+      "latLong": "29.0661,31.0994",
+      "fbLink": "https://translate.google.com.eg/",
+      "imgRes": "c.jpg",
+      "phone": "0111111111"
+    },
+    {
+      "id":"7",
+      "city_name": "فيصل",
+      "procuration_id": "2",
+      "latLong": "28.0833,30.7500",
+      "fbLink": "https://translate.google.com.eg/",
+      "imgRes": "b.png",
+      "phone": "0111111111"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "968659030318",
+    "firebase_url": "https://scooter-life-90028-default-rtdb.firebaseio.com",
+    "project_id": "scooter-life-90028",
+    "storage_bucket": "scooter-life-90028.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968659030318:android:7a06772d424cc9d9b76abf",
+        "android_client_info": {
+          "package_name": "com.ihsan.images"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968659030318-t0tgio11hsnohs8kjijrgr47srfodedg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUTHHB8V8X0M52hGm_AEucvIuC5vD77r8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968659030318-t0tgio11hsnohs8kjijrgr47srfodedg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968659030318:android:70ebb3b6004d9eadb76abf",
+        "android_client_info": {
+          "package_name": "com.scooter.scooterlife02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968659030318-t0tgio11hsnohs8kjijrgr47srfodedg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUTHHB8V8X0M52hGm_AEucvIuC5vD77r8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968659030318-t0tgio11hsnohs8kjijrgr47srfodedg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

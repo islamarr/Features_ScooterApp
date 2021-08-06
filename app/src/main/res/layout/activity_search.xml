@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="10dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp"
+    tools:context=".searchLost.SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/registrationLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="لاستخدام هذه الخدمة يجب تسجيل رقم هاتفك"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/myPhoneEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="right|center_vertical"
+            android:hint="ادخل رقم هاتفك"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="25dp"
+            android:paddingTop="15dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="searchClick"
+            android:text="التسجيل" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/searchLayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:hint="ادخل رقم اللوحة (يجب أن يحتوي على حروف متبوعاً بأرقام)"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/black" />
+
+            <in.aabhasjindal.otptextview.OtpTextView
+                android:id="@+id/searchEditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layoutDirection="rtl"
+                android:textColor="@color/black"
+                android:textDirection="rtl"
+                app:bar_enabled="true"
+                app:bar_height="2dp"
+                app:height="30dp"
+                app:length="8"
+                app:otp_text_size="22sp"
+                app:width="30dp" />
+
+            <Button
+                android:id="@+id/startSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="searchClick"
+                android:text="بحث"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/existLayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:text="مبروك تم العثور على لوحتك .. تواصل مع الشخص الذي عثر عليها"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/plateNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="right"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:onClick="searchClick"
+                    android:text="اتصال"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/notExistLayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="لم يتم العثور على لوحتك .. فضلا قم بتسجيل البيانات لمساعدتك"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="right"
+                    android:text="اسمك"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/nameEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:hint="اسمك"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="right"
+                    android:text="رقم اللوحة"
+                    android:textSize="20sp" />
+
+                <in.aabhasjindal.otptextview.OtpTextView
+                    android:id="@+id/plateEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layoutDirection="rtl"
+                    android:textColor="@color/black"
+                    android:textDirection="rtl"
+                    app:bar_enabled="true"
+                    app:bar_height="2dp"
+                    app:height="30dp"
+                    app:length="8"
+                    app:otp_text_size="22sp"
+                    app:width="30dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="right"
+                    android:text="رقم هاتفك"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/phoneEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:hint="رقم هاتفك"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:onClick="searchClick"
+                    android:text="إرسال" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
