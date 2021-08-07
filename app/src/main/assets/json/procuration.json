@@ -4,19 +4,19 @@
       "id":"1",
       "name_ar":"توكيل أ",
       "name_en":"",
-      "imgRes":"a.png"
+      "imgRes":"imgs/a.png"
     },
     {
       "id":"2",
       "name_ar":"توكيل ب",
       "name_en":"",
-      "imgRes":"b.png"
+      "imgRes":"imgs/b.png"
     },
     {
       "id":"3",
       "name_ar":"توكيل ج",
       "name_en":"",
-      "imgRes":"d.png"
+      "imgRes":"imgs/d.png"
     }
   ]
 }

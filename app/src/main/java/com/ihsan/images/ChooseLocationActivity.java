@@ -20,6 +20,7 @@ public class ChooseLocationActivity extends AppCompatActivity implements Adapter
     Button doneBtn;
     String selectedGov, selectedCity, procurationId;
     ArrayList<String> governoratesId;
+    Bundle extras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,19 +35,30 @@ public class ChooseLocationActivity extends AppCompatActivity implements Adapter
         citiesSpinner.setOnItemSelectedListener(this);
         governoratesSpinner.setOnItemSelectedListener(this);
 
-        Bundle extras = getIntent().getExtras();
+        extras = getIntent().getExtras();
 
         if (extras != null) {
             procurationId = extras.getString("procuration_id");
+        } else {
+            procurationId = "null";
         }
 
         ArrayList<String> governorates = new ArrayList<>();
         governoratesId = new ArrayList<>();
-        ArrayList<ItemModel> allGovernorates = Utils.getListFromJson(this,"json/governorates.json", "procuration_id", "");
-        for (ItemModel governorate : allGovernorates) {
-            if (governorate.getColumn1().contains(procurationId)) {
-                governorates.add(governorate.getItemName());
-                governoratesId.add(governorate.getId());
+        ArrayList<ItemModel> allGovernorates = Utils.getListFromJson(this, "json/governorates.json", "procuration_id", "service_id", "");
+        if (extras != null) {
+            for (ItemModel governorate : allGovernorates) {
+                if (governorate.getColumn1().contains(procurationId)) {
+                    governorates.add(governorate.getItemName());
+                    governoratesId.add(governorate.getId());
+                }
+            }
+        } else {
+            for (ItemModel governorate : allGovernorates) {
+                if (!governorate.getColumn2().equals("0")) {
+                    governorates.add(governorate.getItemName());
+                    governoratesId.add(governorate.getId());
+                }
             }
         }
 
@@ -59,7 +71,7 @@ public class ChooseLocationActivity extends AppCompatActivity implements Adapter
             public void onClick(View v) {
 
                 Intent intent = new Intent(ChooseLocationActivity.this, DistributorsActivity.class);
-                intent.putExtra("governorate",selectedGov);
+                intent.putExtra("governorate", selectedGov);
                 intent.putExtra("city", selectedCity);
                 intent.putExtra("procuration_id", procurationId);
                 startActivity(intent);
@@ -84,10 +96,15 @@ public class ChooseLocationActivity extends AppCompatActivity implements Adapter
 
     private void getCities(String governorateId) {
         ArrayList<String> cities = new ArrayList<>();
-        ArrayList<ItemModel> allCities = Utils.getListFromJson(this, "json/cities.json", "governorate_id", "procuration_id");
+        ArrayList<ItemModel> allCities = Utils.getListFromJson(this, "json/cities.json", "governorate_id", "procuration_id", "service_id");
         for (ItemModel city : allCities) {
-            if (city.getColumn1().equals(governorateId) && city.getColumn2().contains(procurationId))
-                cities.add(city.getItemName());
+            if (extras != null) {
+                if (city.getColumn1().equals(governorateId) && city.getColumn2().contains(procurationId))
+                    cities.add(city.getItemName());
+            } else {
+                if (city.getColumn1().equals(governorateId) && !city.getColumn3().equals("0"))
+                    cities.add(city.getItemName());
+            }
         }
         ArrayAdapter arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, cities);
         arrayAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

@@ -36,16 +36,28 @@ public class DistributorsActivity extends AppCompatActivity {
         if (extras != null) {
             selectedGov = extras.getString("governorate");
             selectedCity = extras.getString("city");
-            procurationId = extras.getString("procuration_id");
+            procurationId = extras.getString("procuration_id", "null");
 
-            //selectedTxt.setText(procurationId+"\n\n"+selectedCity +", "+selectedGov);
         }
 
-        ArrayList<DistributorModel> distModel = getListFromJson("json/distributor.json");
         ArrayList<DistributorModel> distArr = new ArrayList<>();
-        for (DistributorModel dist : distModel) {
-            if (procurationId.equals(dist.getProcId()) && selectedCity.equals(dist.getCityName())) { //TODO
-                distArr.add(dist);
+        if (!procurationId.equals("null")) {
+            ArrayList<DistributorModel> distModel = getListFromJson("json/distributor.json", "procuration_id");
+            for (DistributorModel dist : distModel) {
+                if (selectedCity.equals(dist.getCityName())) {
+                    if (procurationId.equals(dist.getProId())) {
+                        distArr.add(dist);
+                    }
+                }
+            }
+        } else {
+            ArrayList<DistributorModel> serviceModel = getListFromJson("json/services.json", "service_id");
+            for (DistributorModel serv : serviceModel) {
+                if (selectedCity.equals(serv.getCityName())) {
+                    if (!serv.getProId().equals("0")) {
+                        distArr.add(serv);
+                    }
+                }
             }
         }
 
@@ -57,7 +69,7 @@ public class DistributorsActivity extends AppCompatActivity {
 
 
 
-    public ArrayList<DistributorModel> getListFromJson(String jsonFile) { //TODO
+    public ArrayList<DistributorModel> getListFromJson(String jsonFile, String providerId) {
         try {
             JSONObject obj = new JSONObject(Utils.loadJSONFromAsset(DistributorsActivity.this, jsonFile));
             JSONArray jArray = obj.getJSONArray("data");
@@ -66,13 +78,13 @@ public class DistributorsActivity extends AppCompatActivity {
                 JSONObject jo_inside = jArray.getJSONObject(i);
                 String id = jo_inside.getString("id");
                 String cityName = jo_inside.getString("city_name");
-                String procId = jo_inside.getString("procuration_id");
+                String proId = jo_inside.getString(providerId);
                 String latLong = jo_inside.getString("latLong");
                 String phone = jo_inside.getString("phone");
                 String fbLink = jo_inside.getString("fbLink");
                 String imgRes = jo_inside.getString("imgRes");
 
-                itemList.add(new DistributorModel(id, cityName, procId, fbLink, imgRes, phone, latLong));
+                itemList.add(new DistributorModel(id, cityName, proId, fbLink, imgRes, phone, latLong));
             }
             return itemList;
         } catch (JSONException e) {

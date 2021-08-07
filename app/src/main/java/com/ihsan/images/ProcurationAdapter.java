@@ -37,7 +37,7 @@ public class ProcurationAdapter extends RecyclerView.Adapter<ProcurationAdapter.
     public void onBindViewHolder(ViewHolder holder, int position) {
         ItemModel proc = mData.get(position);
         try {
-            InputStream ims = context.getAssets().open("imgs/"+proc.getColumn1());
+            InputStream ims = context.getAssets().open(proc.getColumn1());
             Drawable d = Drawable.createFromStream(ims, null);
             holder.myImage.setImageDrawable(d);
         } catch (IOException ex) {

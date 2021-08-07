@@ -1,12 +1,12 @@
 package com.ihsan.images;
 
-public class DistributorModel { //TODO
-    private String id, cityName, procId, fbLink, imgRes, phone, latLong;
+public class DistributorModel {
+    private String id, cityName, proId, fbLink, imgRes, phone, latLong;
 
-    public DistributorModel(String id, String cityName, String procId, String fbLink, String imgRes, String phone, String latLong) {
+    public DistributorModel(String id, String cityName, String proId, String fbLink, String imgRes, String phone, String latLong) {
         this.id = id;
         this.cityName = cityName;
-        this.procId = procId;
+        this.proId = proId;
         this.fbLink = fbLink;
         this.imgRes = imgRes;
         this.phone = phone;
@@ -29,12 +29,12 @@ public class DistributorModel { //TODO
         this.cityName = cityName;
     }
 
-    public String getProcId() {
-        return procId;
+    public String getProId() {
+        return proId;
     }
 
-    public void setProcId(String procId) {
-        this.procId = procId;
+    public void setProId(String proId) {
+        this.proId = proId;
     }
 
     public String getFbLink() {

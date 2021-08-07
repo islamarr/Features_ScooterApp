@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class Utils {
 
-    public static ArrayList<ItemModel> getListFromJson(Context context, String jsonFile, String column1, String column2) {
+    public static ArrayList<ItemModel> getListFromJson(Context context, String jsonFile, String column1, String column2, String column3) {
         try {
             JSONObject obj = new JSONObject(loadJSONFromAsset(context, jsonFile));
             JSONArray jArray = obj.getJSONArray("data");
@@ -25,7 +25,8 @@ public class Utils {
                 String id = jo_inside.getString("id");
                 String col1 = column1.equals("") ? "" : jo_inside.getString(column1);
                 String col2 = column2.equals("") ? "" : jo_inside.getString(column2);
-                itemList.add(new ItemModel(id, item, col1, col2));
+                String col3 = column3.equals("") ? "" : jo_inside.getString(column3);
+                itemList.add(new ItemModel(id, item, col1, col2, col3));
             }
             return itemList;
         } catch (JSONException e) {

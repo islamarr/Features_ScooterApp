@@ -4,163 +4,190 @@
       "id":"1",
       "name_ar":"القاهرة",
       "name_en":"Cairo",
-      "procuration_id": "1,2,3"
+      "procuration_id": "1,2,3",
+      "service_id": "1,2,3"
     },
     {
       "id":"2",
       "name_ar":"الجيزة",
       "name_en":"Giza",
-      "procuration_id": "1,2"
+      "procuration_id": "1,2",
+      "service_id": "1,2"
     },
     {
       "id":"3",
       "name_ar":"الأسكندرية",
       "name_en":"Alexandria",
-      "procuration_id": "1"
+      "procuration_id": "1",
+      "service_id": "1"
     },
     {
       "id":"4",
       "name_ar":"الدقهلية",
       "name_en":"Dakahlia",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"5",
       "name_ar":"البحر الأحمر",
       "name_en":"Red Sea",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"6",
       "name_ar":"البحيرة",
       "name_en":"Beheira",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"7",
       "name_ar":"الفيوم",
       "name_en":"Fayoum",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"8",
       "name_ar":"الغربية",
       "name_en":"Gharbiya",
-      "procuration_id": "1"
+      "procuration_id": "1",
+      "service_id": "1"
     },
     {
       "id":"9",
       "name_ar":"الإسماعلية",
       "name_en":"Ismailia",
-      "procuration_id": "1"
+      "procuration_id": "1",
+      "service_id": "1"
     },
     {
       "id":"10",
       "name_ar":"المنوفية",
       "name_en":"Menofia",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"11",
       "name_ar":"المنيا",
       "name_en":"Minya",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"12",
       "name_ar":"القليوبية",
       "name_en":"Qaliubiya",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"13",
       "name_ar":"الوادي الجديد",
       "name_en":"New Valley",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"14",
       "name_ar":"السويس",
       "name_en":"Suez",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"15",
       "name_ar":"اسوان",
       "name_en":"Aswan",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"16",
       "name_ar":"اسيوط",
       "name_en":"Assiut",
-      "procuration_id": "3"
+      "procuration_id": "3",
+      "service_id": "0"
     },
     {
       "id":"17",
       "name_ar":"بني سويف",
       "name_en":"Beni Suef",
-      "procuration_id": "4"
+      "procuration_id": "4",
+      "service_id": "0"
     },
     {
       "id":"18",
       "name_ar":"بورسعيد",
       "name_en":"Port Said",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"19",
       "name_ar":"دمياط",
       "name_en":"Damietta",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"20",
       "name_ar":"الشرقية",
       "name_en":"Sharkia",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"21",
       "name_ar":"جنوب سيناء",
       "name_en":"South Sinai",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"22",
       "name_ar":"كفر الشيخ",
       "name_en":"Kafr Al sheikh",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"23",
       "name_ar":"مطروح",
       "name_en":"Matrouh",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"24",
       "name_ar":"الأقصر",
       "name_en":"Luxor",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"25",
       "name_ar":"قنا",
       "name_en":"Qena",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"26",
       "name_ar":"شمال سيناء",
       "name_en":"North Sinai",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     },
     {
       "id":"27",
       "name_ar":"سوهاج",
       "name_en":"Sohag",
-      "procuration_id": "0"
+      "procuration_id": "0",
+      "service_id": "0"
     }
   ]
 }

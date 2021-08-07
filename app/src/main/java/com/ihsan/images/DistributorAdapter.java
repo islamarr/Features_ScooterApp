@@ -41,7 +41,7 @@ public class DistributorAdapter extends RecyclerView.Adapter<DistributorAdapter.
     public void onBindViewHolder(ViewHolder holder, int position) { //TODO
         DistributorModel distr = mData.get(position);
         try {
-            InputStream ims = context.getAssets().open("imgs/" + distr.getImgRes());
+            InputStream ims = context.getAssets().open(distr.getImgRes());
             Drawable d = Drawable.createFromStream(ims, null);
             holder.backgroundImg.setImageDrawable(d);
         } catch (IOException ex) {

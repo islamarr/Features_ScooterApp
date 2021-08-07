@@ -2,13 +2,14 @@ package com.ihsan.images;
 
 public class ItemModel {
 
-    private String id, itemName, column1, column2;
+    private String id, itemName, column1, column2, column3;
 
-    public ItemModel(String id, String itemName, String column1, String column2) {
+    public ItemModel(String id, String itemName, String column1, String column2, String column3) {
         this.id = id;
         this.itemName = itemName;
         this.column1 = column1;
         this.column2 = column2;
+        this.column3 = column3;
     }
 
     public String getId() {
@@ -41,5 +42,13 @@ public class ItemModel {
 
     public void setColumn2(String column2) {
         this.column2 = column2;
+    }
+
+    public String getColumn3() {
+        return column3;
+    }
+
+    public void setColumn3(String column3) {
+        this.column3 = column3;
     }
 }

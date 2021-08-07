@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         procurationList = findViewById(R.id.procurationList);
 
-        ArrayList<ItemModel> procModel = Utils.getListFromJson(this, "json/procuration.json", "imgRes", "");
+        ArrayList<ItemModel> procModel = Utils.getListFromJson(this, "json/procuration.json", "imgRes", "", "");
 
         procurationList.setLayoutManager(new LinearLayoutManager(this));
         procurationAdapter = new ProcurationAdapter(this, procModel);
